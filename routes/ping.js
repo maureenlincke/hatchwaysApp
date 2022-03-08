@@ -4,9 +4,11 @@ const pingRouter = express.Router();
 pingRouter.get('/', async (req, res, next) => {
     try {
         res.send({
-            success: "true",
+            success: true,
         })
     } catch (error) {
         next(error)
     }
 })
+
+module.exports = pingRouter;
